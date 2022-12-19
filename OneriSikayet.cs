@@ -10,11 +10,27 @@ using System.Windows.Forms;
 
 namespace ProjeÖdevi
 {
-    public partial class Odemeler : Form
+    public partial class OneriSikayet : Form
     {
-        public Odemeler()
+        public OneriSikayet()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Mesajınız gönderilmiştir, ilginiz için teşekkür ederiz...");
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -25,17 +41,16 @@ namespace ProjeÖdevi
             this.Hide();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void OneriSikayet_Load(object sender, EventArgs e)
         {
-            Application.Exit();
 
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Menu m1 = new Menu();
-            m1.Show();
-            m1.Location = new Point(100, 100);
+            Ayarlar ayar1 = new Ayarlar();
+            ayar1.Show();
+            ayar1.Location = new Point(100, 100);
             this.Hide();
         }
     }

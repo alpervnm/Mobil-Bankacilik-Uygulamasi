@@ -18,3 +18,7 @@ C:\Users\Alper\OneDrive\Masaüstü\ProjeÖdevi\ProjeÖdevi\obj\Debug\ProjeÖdevi
 C:\Users\Alper\OneDrive\Masaüstü\ProjeÖdevi\ProjeÖdevi\obj\Debug\ProjeÖdevi.Yatirim.resources
 C:\Users\Alper\OneDrive\Masaüstü\ProjeÖdevi\ProjeÖdevi\obj\Debug\ProjeÖdevi.Transfer.resources
 C:\Users\Alper\OneDrive\Masaüstü\ProjeÖdevi\ProjeÖdevi\obj\Debug\ProjeÖdevi.Kayit.resources
+C:\Users\Alper\OneDrive\Masaüstü\ProjeÖdevi\ProjeÖdevi\obj\Debug\ProjeÖdevi.forget.resources
+C:\Users\Alper\OneDrive\Masaüstü\ProjeÖdevi\ProjeÖdevi\obj\Debug\ProjeÖdevi.delACC.resources
+C:\Users\Alper\OneDrive\Masaüstü\ProjeÖdevi\ProjeÖdevi\obj\Debug\ProjeÖdevi.Kayıp.resources
+C:\Users\Alper\OneDrive\Masaüstü\ProjeÖdevi\ProjeÖdevi\obj\Debug\ProjeÖdevi.OneriSikayet.resources

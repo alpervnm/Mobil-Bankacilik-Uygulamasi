@@ -20,8 +20,9 @@ namespace ProjeÖdevi
         private void button7_Click(object sender, EventArgs e)
         {
             Arayüz arayüz1 = new Arayüz();
-            arayüz1.ShowDialog();
-            this.Close();
+            arayüz1.Show();
+            arayüz1.Location = new Point(100, 100);
+            this.Hide();
 
         }
 
@@ -34,8 +35,9 @@ namespace ProjeÖdevi
         private void button4_Click(object sender, EventArgs e)
         {
             Menu m1 = new Menu();
-            m1.ShowDialog();
-            this.Close();
+            m1.Show();
+            m1.Location = new Point(100, 100);
+            this.Hide();
         }
     }
 }

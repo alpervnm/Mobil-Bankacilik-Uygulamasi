@@ -80,9 +80,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.Location = new System.Drawing.Point(249, 95);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(262, 26);
+            this.label1.Size = new System.Drawing.Size(152, 26);
             this.label1.TabIndex = 15;
-            this.label1.Text = "IBAN veya Kart Numarası";
+            this.label1.Text = "Kart Numarası";
             // 
             // label2
             // 
@@ -121,6 +121,7 @@
             this.button1.TabIndex = 19;
             this.button1.Text = "İşlemi Tamamla";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox3
             // 
@@ -148,6 +149,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label3);
@@ -159,6 +161,8 @@
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button5);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Location = new System.Drawing.Point(100, 100);
             this.Name = "Transfer";
             this.Text = "Transfer İşlemleri";
             this.ResumeLayout(false);

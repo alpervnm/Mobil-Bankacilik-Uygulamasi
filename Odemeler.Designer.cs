@@ -71,10 +71,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
+            this.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Location = new System.Drawing.Point(100, 100);
             this.Name = "Odemeler";
             this.Text = "Ödeme işlemleri";
             this.ResumeLayout(false);

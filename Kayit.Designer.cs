@@ -94,11 +94,12 @@
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.textBox3.Location = new System.Drawing.Point(178, 140);
+            this.textBox3.Location = new System.Drawing.Point(178, 138);
             this.textBox3.MaxLength = 11;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(147, 30);
-            this.textBox3.TabIndex = 13;
+            this.textBox3.TabIndex = 10;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox8_KeyPress_1);
             // 
             // textBox4
@@ -107,7 +108,8 @@
             this.textBox4.Location = new System.Drawing.Point(178, 197);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(147, 30);
-            this.textBox4.TabIndex = 12;
+            this.textBox4.TabIndex = 11;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             this.textBox4.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox8_KeyPress_1);
             // 
             // label3
@@ -150,7 +152,8 @@
             this.textBox8.MaxLength = 8;
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(147, 30);
-            this.textBox8.TabIndex = 25;
+            this.textBox8.TabIndex = 15;
+            this.textBox8.TextChanged += new System.EventHandler(this.textBox8_TextChanged);
             this.textBox8.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox8_KeyPress_1);
             // 
             // label8
@@ -181,7 +184,7 @@
             this.textBox7.Location = new System.Drawing.Point(598, 26);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(147, 30);
-            this.textBox7.TabIndex = 29;
+            this.textBox7.TabIndex = 14;
             this.textBox7.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox5_KeyPress);
             // 
             // label7
@@ -201,7 +204,7 @@
             this.textBox9.Location = new System.Drawing.Point(598, 138);
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(147, 30);
-            this.textBox9.TabIndex = 31;
+            this.textBox9.TabIndex = 16;
             this.textBox9.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // label9
@@ -225,6 +228,7 @@
             this.button1.TabIndex = 32;
             this.button1.Text = "Kayıt Oluştur";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label10
             // 
@@ -241,7 +245,7 @@
             this.textBox5.Location = new System.Drawing.Point(178, 257);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(147, 30);
-            this.textBox5.TabIndex = 33;
+            this.textBox5.TabIndex = 12;
             this.textBox5.UseSystemPasswordChar = true;
             // 
             // textBox6
@@ -250,7 +254,7 @@
             this.textBox6.Location = new System.Drawing.Point(178, 314);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(147, 30);
-            this.textBox6.TabIndex = 34;
+            this.textBox6.TabIndex = 13;
             this.textBox6.UseSystemPasswordChar = true;
             // 
             // button2
@@ -270,6 +274,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox6);
@@ -292,6 +297,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Location = new System.Drawing.Point(100, 100);
             this.Name = "Kayit";
             this.Text = "Kayıt İşlemleri";
             this.Load += new System.EventHandler(this.Kayit_Load);

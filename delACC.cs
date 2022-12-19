@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ProjeÖdevi
 {
-    public partial class Odemeler : Form
+    public partial class delACC : Form
     {
-        public Odemeler()
+        public delACC()
         {
             InitializeComponent();
         }
@@ -25,18 +25,22 @@ namespace ProjeÖdevi
             this.Hide();
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Ayarlar ayar1 = new Ayarlar();
+            ayar1.Show();
+            ayar1.Location = new Point(100, 100);
+            this.Hide();
+        }
+
         private void button5_Click(object sender, EventArgs e)
         {
             Application.Exit();
-
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            Menu m1 = new Menu();
-            m1.Show();
-            m1.Location = new Point(100, 100);
-            this.Hide();
+
         }
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace ProjeÖdevi
 {
@@ -45,8 +46,48 @@ namespace ProjeÖdevi
         private void button2_Click(object sender, EventArgs e)
         {
             Giris grs = new Giris();
-            grs.ShowDialog();
-            this.Close();
+            grs.Show();
+            grs.Location = new Point(100, 100);
+            this.Hide();
+        }
+        SqlConnection baglanti = new SqlConnection("Data Source=ALPER;Initial Catalog=BankaProje;Integrated Security=True");
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Random random = new Random();
+            int hesap = random.Next(1000,9999);
+            int para = random.Next(2000, 10000);
+            baglanti.Open();
+            SqlCommand kyt = new SqlCommand("insert into MusteriBilgi (İsim,Soyisim,Tc,Telefon,Şifre,Mail,DoğumTarihi,DoğumYeri,HesapNo,ParaMiktarı) values (@k1,@k2,@k3,@k4,@k5,@k7,@k8,@k9,@k10,@k11)", baglanti);
+            kyt.Parameters.AddWithValue("@k1", textBox1.Text);
+            kyt.Parameters.AddWithValue("@k2", textBox2.Text);
+            kyt.Parameters.AddWithValue("@k3", textBox3.Text);
+            kyt.Parameters.AddWithValue("@k4", textBox4.Text);
+            kyt.Parameters.AddWithValue("@k5", textBox5.Text);
+            kyt.Parameters.AddWithValue("@k7", textBox7.Text);
+            kyt.Parameters.AddWithValue("@k8", textBox8.Text);
+            kyt.Parameters.AddWithValue("@k9", textBox9.Text);
+            kyt.Parameters.AddWithValue("@k10", hesap);
+            kyt.Parameters.AddWithValue("@k11", para);
+
+            kyt.ExecuteNonQuery();
+            baglanti.Close();
+
+            MessageBox.Show("Kayıt başarıyla tamamlandı!");
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
