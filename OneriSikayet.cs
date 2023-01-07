@@ -19,7 +19,7 @@ namespace ProjeÖdevi
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Mesajınız gönderilmiştir, ilginiz için teşekkür ederiz...");
+            MessageBox.Show("Mesajınız gönderilmiştir, ilginiz için teşekkür ederiz...","Teşekkürler");
 
         }
 
@@ -30,7 +30,16 @@ namespace ProjeÖdevi
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult result1 = MessageBox.Show("Uygulamayı kapatmak mı istiyorsunuz?", "Uygulama Çıkış", MessageBoxButtons.YesNo);
+            if (result1 == DialogResult.Yes)
+            {
+
+                Application.Exit();
+            }
+            else
+            {
+
+            }
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -51,6 +60,14 @@ namespace ProjeÖdevi
             Ayarlar ayar1 = new Ayarlar();
             ayar1.Show();
             ayar1.Location = new Point(100, 100);
+            this.Hide();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Giris grs = new Giris();
+            grs.Show();
+            grs.Location = new Point(100, 100);
             this.Hide();
         }
     }

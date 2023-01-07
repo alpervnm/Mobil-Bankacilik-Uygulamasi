@@ -24,33 +24,43 @@ namespace ProjeÖdevi
         {
             InitializeComponent();
         }
+        public static string şfr;
         private void button1_Click(object sender, EventArgs e)
         {
-            string user = textBox1.Text;
-            string password = textBox2.Text;
-
-            con = new SqlConnection("Data Source=ALPER;Initial Catalog=BankaProje;Integrated Security=True");
-            com = new SqlCommand();
-
-            con.Open();
-            com.Connection = con;
-            com.CommandText = "Select * From MusteriBilgi where Tc = '" + textBox1.Text + "'And Şifre = '" + textBox2.Text + "'";
-            dr = com.ExecuteReader();
-            if (dr.Read())
+            if (textBox1.Text == "Admin" && textBox2.Text == "Admin")
             {
-                Arayüz arayuz1 = new Arayüz();
-                arayuz1.Show();
-                arayuz1.Location = new Point(100, 100);
+                AdminPanel adm = new AdminPanel();
+                adm.Show();
+                adm.Location = new Point(100, 100);
                 this.Hide();
 
             }
             else
             {
-                MessageBox.Show("Girdiğiniz bilgilere ait kullanıcı bulunmamaktadır.");
-            }
-            
+                string user = textBox1.Text;
+                string password = textBox2.Text;
+                şfr = textBox2.Text;
 
-            
+                con = new SqlConnection("Data Source=ALPER;Initial Catalog=BankaProje;Integrated Security=True");
+                com = new SqlCommand();
+
+                con.Open();
+                com.Connection = con;
+                com.CommandText = "Select * From MusteriBilgi where Tc = '" + textBox1.Text + "'And Şifre = '" + textBox2.Text + "'";
+                dr = com.ExecuteReader();
+                if (dr.Read())
+                {
+                    Arayüz arayuz1 = new Arayüz();
+                    arayuz1.Show();
+                    arayuz1.Location = new Point(100, 100);
+                    this.Hide();
+
+                }
+                else
+                {
+                    MessageBox.Show("Girdiğiniz bilgilere ait kullanıcı bulunmamaktadır.", "Kullanıcı bulunamadı");
+                }
+            } 
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -77,6 +87,19 @@ namespace ProjeÖdevi
         private void Giris_Load(object sender, EventArgs e)
         {
 
+        }
+        private void button4_Click(object sender, EventArgs e)
+        {
+            İletişim İlet = new İletişim();
+            İlet.Show();
+            İlet.Location = new Point(100, 100);
+            this.Hide();
+
+        }
+        public static string hsp;
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            hsp = textBox1.Text;
         }
     }
 }

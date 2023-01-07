@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Sql;
 using System.Data.SqlClient;
+using System.Diagnostics;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ProjeÖdevi
 {
@@ -18,6 +20,11 @@ namespace ProjeÖdevi
         {
             InitializeComponent();
         }
+        SqlConnection con = new SqlConnection();
+        SqlDataAdapter da = new SqlDataAdapter();
+        SqlCommand com = new SqlCommand();
+        DataSet ds = new DataSet();
+
 
         private void button7_Click(object sender, EventArgs e)
         {
@@ -30,7 +37,16 @@ namespace ProjeÖdevi
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult result1 = MessageBox.Show("Uygulamayı kapatmak mı istiyorsunuz?", "Uygulama Çıkış", MessageBoxButtons.YesNo);
+            if (result1 == DialogResult.Yes)
+            {
+
+                Application.Exit();
+            }
+            else
+            {
+
+            }
 
         }
 
@@ -62,30 +78,97 @@ namespace ProjeÖdevi
             e.Handled = !char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar)
                 && !char.IsSeparator(e.KeyChar);
         }
-        SqlConnection con;
-        SqlDataReader dr;
-        SqlCommand com;
+
+        public int Para2;
+        void Oku()
+        {
+            DataTable dt = new DataTable();
+            con = new SqlConnection("Data Source = ALPER; Initial Catalog = BankaProje; Integrated Security = True");
+            da = new SqlDataAdapter("Select * From MusteriBilgi where HesapNo = " + textBox1.Text + "", con);
+            ds = new DataSet();
+            con.Open();
+            da.Fill(ds, "0");
+            dt = ds.Tables[0];
+            con.Close();
+
+            Para2 = Convert.ToInt32(dt.Rows[0]["ParaMiktarı"].ToString());
+        }
+
+        SqlConnection baglanti = new SqlConnection("Data Source = ALPER; Initial Catalog = BankaProje; Integrated Security = True");
         private void button1_Click(object sender, EventArgs e)
         {
-            con = new SqlConnection("Data Source=ALPER;Initial Catalog=BankaProje;Integrated Security=True");
-            com = new SqlCommand();
-            con.Open();
-
-            com.Connection = con;
-            com.CommandText = "Select HesapNo from MusteriBilgi where HesapNo = '" + textBox1.Text + "'";
-
-
-            dr = com.ExecuteReader();
-            if (Convert.ToInt32(textBox3.Text) < 10000 && Convert.ToInt32(textBox3.Text) > 1000)
+            
+            
+            
+            if (Arayüz.Hesap != textBox1.Text)
             {
-                MessageBox.Show("Talebiniz alınmıştır.");
+                
+                try
+                {
+                    Oku();
+                    int a = Convert.ToInt32(textBox3.Text);
+                    int b = Para2 + a;
+                    int c = Arayüz.Para - a;
 
+                    if (c > 0)
+                    {
+                        baglanti.Open();
+
+                        //Gönderilen Hesap
+                        SqlCommand komutguncelle = new SqlCommand("update MusteriBilgi set ParaMiktarı = @k1 where HesapNo = @k2", baglanti);
+                        komutguncelle.Parameters.AddWithValue("@k2", textBox1.Text);
+                        komutguncelle.Parameters.AddWithValue("@k1", b);
+                        komutguncelle.ExecuteNonQuery();
+
+
+                        //Gönderici Hesap
+                        SqlCommand komut = new SqlCommand("update MusteriBilgi set ParaMiktarı = @k1 where HesapNo = @k2", baglanti);
+                        komut.Parameters.AddWithValue("@k2", Arayüz.Hesap);
+                        komut.Parameters.AddWithValue("@k1", c);
+                        komut.ExecuteNonQuery();
+
+                        baglanti.Close();
+                        MessageBox.Show("İşleminiz başarıyla gerçekleşmiştir.", "Başarılı");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Hesabınızda yeterli miktarda para yok!", "Uyarı");
+                    }
+
+                }
+                catch
+                {
+                    MessageBox.Show("Lütfen Bilgileri Doğru Giriniz!");
+                }
+
+               
             }
             else
             {
-                MessageBox.Show("Hesabınızda yeterli miktarda varlık yok!");
+                MessageBox.Show("Kendi Hesabınıza para gönderemezsiniz!","Uyarı");
             }
+        }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Giris grs = new Giris();
+            grs.Show();
+            grs.Location = new Point(100, 100);
+            this.Hide();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void Transfer_Load(object sender, EventArgs e)
+        {
 
         }
     }

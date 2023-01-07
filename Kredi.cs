@@ -28,7 +28,16 @@ namespace ProjeÖdevi
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult result1 = MessageBox.Show("Uygulamayı kapatmak mı istiyorsunuz?", "Uygulama Çıkış", MessageBoxButtons.YesNo);
+            if (result1 == DialogResult.Yes)
+            {
+
+                Application.Exit();
+            }
+            else
+            {
+
+            }
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -41,7 +50,7 @@ namespace ProjeÖdevi
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Başvurunuz alınmıştır! En kısa sürede tarafınıza dönüş yapacağız...");
+            MessageBox.Show("Başvurunuz alınmıştır! En kısa sürede tarafınıza dönüş yapacağız...","Başarılı");
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -57,6 +66,14 @@ namespace ProjeÖdevi
         private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Giris grs = new Giris();
+            grs.Show();
+            grs.Location = new Point(100, 100);
+            this.Hide();
         }
     }
 }

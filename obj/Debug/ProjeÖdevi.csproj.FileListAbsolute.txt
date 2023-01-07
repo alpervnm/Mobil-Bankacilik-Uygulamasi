@@ -22,3 +22,30 @@ C:\Users\Alper\OneDrive\Masaüstü\ProjeÖdevi\ProjeÖdevi\obj\Debug\ProjeÖdevi
 C:\Users\Alper\OneDrive\Masaüstü\ProjeÖdevi\ProjeÖdevi\obj\Debug\ProjeÖdevi.delACC.resources
 C:\Users\Alper\OneDrive\Masaüstü\ProjeÖdevi\ProjeÖdevi\obj\Debug\ProjeÖdevi.Kayıp.resources
 C:\Users\Alper\OneDrive\Masaüstü\ProjeÖdevi\ProjeÖdevi\obj\Debug\ProjeÖdevi.OneriSikayet.resources
+C:\Users\Alper\OneDrive\Masaüstü\ProjeÖdevi\ProjeÖdevi\obj\Debug\ProjeÖdevi.İletişim.resources
+C:\Users\Alper\OneDrive\Masaüstü\Visual ProjeÖdevi\ProjeÖdevi\bin\Debug\ProjeÖdevi.exe.config
+C:\Users\Alper\OneDrive\Masaüstü\Visual ProjeÖdevi\ProjeÖdevi\bin\Debug\ProjeÖdevi.exe
+C:\Users\Alper\OneDrive\Masaüstü\Visual ProjeÖdevi\ProjeÖdevi\bin\Debug\ProjeÖdevi.pdb
+C:\Users\Alper\OneDrive\Masaüstü\Visual ProjeÖdevi\ProjeÖdevi\obj\Debug\ProjeÖdevi.csproj.AssemblyReference.cache
+C:\Users\Alper\OneDrive\Masaüstü\Visual ProjeÖdevi\ProjeÖdevi\obj\Debug\ProjeÖdevi.csproj.SuggestedBindingRedirects.cache
+C:\Users\Alper\OneDrive\Masaüstü\Visual ProjeÖdevi\ProjeÖdevi\obj\Debug\ProjeÖdevi.Arayüz.resources
+C:\Users\Alper\OneDrive\Masaüstü\Visual ProjeÖdevi\ProjeÖdevi\obj\Debug\ProjeÖdevi.Ayarlar.resources
+C:\Users\Alper\OneDrive\Masaüstü\Visual ProjeÖdevi\ProjeÖdevi\obj\Debug\ProjeÖdevi.delACC.resources
+C:\Users\Alper\OneDrive\Masaüstü\Visual ProjeÖdevi\ProjeÖdevi\obj\Debug\ProjeÖdevi.forget.resources
+C:\Users\Alper\OneDrive\Masaüstü\Visual ProjeÖdevi\ProjeÖdevi\obj\Debug\ProjeÖdevi.Giris.resources
+C:\Users\Alper\OneDrive\Masaüstü\Visual ProjeÖdevi\ProjeÖdevi\obj\Debug\ProjeÖdevi.Kayit.resources
+C:\Users\Alper\OneDrive\Masaüstü\Visual ProjeÖdevi\ProjeÖdevi\obj\Debug\ProjeÖdevi.Kredi.resources
+C:\Users\Alper\OneDrive\Masaüstü\Visual ProjeÖdevi\ProjeÖdevi\obj\Debug\ProjeÖdevi.Menu.resources
+C:\Users\Alper\OneDrive\Masaüstü\Visual ProjeÖdevi\ProjeÖdevi\obj\Debug\ProjeÖdevi.Kayıp.resources
+C:\Users\Alper\OneDrive\Masaüstü\Visual ProjeÖdevi\ProjeÖdevi\obj\Debug\ProjeÖdevi.Odemeler.resources
+C:\Users\Alper\OneDrive\Masaüstü\Visual ProjeÖdevi\ProjeÖdevi\obj\Debug\ProjeÖdevi.OneriSikayet.resources
+C:\Users\Alper\OneDrive\Masaüstü\Visual ProjeÖdevi\ProjeÖdevi\obj\Debug\ProjeÖdevi.Properties.Resources.resources
+C:\Users\Alper\OneDrive\Masaüstü\Visual ProjeÖdevi\ProjeÖdevi\obj\Debug\ProjeÖdevi.Sifre.resources
+C:\Users\Alper\OneDrive\Masaüstü\Visual ProjeÖdevi\ProjeÖdevi\obj\Debug\ProjeÖdevi.Transfer.resources
+C:\Users\Alper\OneDrive\Masaüstü\Visual ProjeÖdevi\ProjeÖdevi\obj\Debug\ProjeÖdevi.Yatirim.resources
+C:\Users\Alper\OneDrive\Masaüstü\Visual ProjeÖdevi\ProjeÖdevi\obj\Debug\ProjeÖdevi.İletişim.resources
+C:\Users\Alper\OneDrive\Masaüstü\Visual ProjeÖdevi\ProjeÖdevi\obj\Debug\ProjeÖdevi.csproj.GenerateResource.cache
+C:\Users\Alper\OneDrive\Masaüstü\Visual ProjeÖdevi\ProjeÖdevi\obj\Debug\ProjeÖdevi.csproj.CoreCompileInputs.cache
+C:\Users\Alper\OneDrive\Masaüstü\Visual ProjeÖdevi\ProjeÖdevi\obj\Debug\ProjeÖdevi.exe
+C:\Users\Alper\OneDrive\Masaüstü\Visual ProjeÖdevi\ProjeÖdevi\obj\Debug\ProjeÖdevi.pdb
+C:\Users\Alper\OneDrive\Masaüstü\Visual ProjeÖdevi\ProjeÖdevi\obj\Debug\ProjeÖdevi.AdminPanel.resources

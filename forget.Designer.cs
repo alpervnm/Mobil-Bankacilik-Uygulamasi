@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(forget));
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
@@ -54,11 +55,11 @@
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label9.Location = new System.Drawing.Point(396, 122);
+            this.label9.Location = new System.Drawing.Point(485, 122);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(136, 26);
+            this.label9.Size = new System.Drawing.Size(57, 26);
             this.label9.TabIndex = 45;
-            this.label9.Text = "Email Adresi";
+            this.label9.Text = "İSİM";
             // 
             // textBox7
             // 
@@ -73,7 +74,7 @@
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.Location = new System.Drawing.Point(403, 177);
+            this.label7.Location = new System.Drawing.Point(413, 177);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(129, 26);
             this.label7.TabIndex = 43;
@@ -157,6 +158,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.button5);
@@ -170,7 +172,10 @@
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(100, 100);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "forget";
             this.Text = "forget";
             this.ResumeLayout(false);
